@@ -1,0 +1,7 @@
+const Coding = () => {
+    return <div>
+            <p>As a kid, I always said I wanted to triple major in music, computer science, and math. I accomplished one of those three, but still kept up a passion for the other two as well. I love figuring out how an algorithm works, and seeing if I can make it more efficient. I was dancing when it was suggested to me to switch my major over to computer science. I did switch and attended Neumont University for about 2 years. Learning Java, .net, programming methodologies, algorithms, sql, html5, css3, js es5. From here I did have a little break, but went back to finish my degree in 2016 with Steven's Henager College. I then went into a web development bootcamp in March of 2017 when it became clear I needed more skills. I was able to secure my first job as a developer at Balance of Nature. There I worked in php and mysql for the backend, using mostly extjs for the front end. This was all business facing, improving key elements for the business. I was also able to improve the customer facing site, which was created in wordpress and angular. I was able to have the opportunity to teach dance after this, which I will be forever grateful for, but when the time came I knew getting back into coding was the right move for me. I looked for a place to help me dust off my skills and learn new ones in the process at DevMountain finishing end of March 2021.</p>
+        </div>
+}
+
+export default Coding;
