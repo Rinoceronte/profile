@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-<<<<<<< HEAD
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -13,16 +12,6 @@ const history = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
-=======
-import {HashRouter, BrowserRouter} from 'react-router-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-const Router = process.env.NODE_ENV === ' development' ? HashRouter : BrowserRouter;
-ReactDOM.render(
-  <React.StrictMode>
-    <Router>
->>>>>>> 42ef3bee96893fc1208b1a76ffb84c883f632098
       <App />
     </Router>
   </React.StrictMode>,
