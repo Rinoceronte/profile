@@ -5,7 +5,7 @@
 }
 body {
     
-    background: #616161;
+    background: #373737;
     display: flex;
     justify-content: center;
     overflow-x: hidden;
@@ -19,7 +19,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95vw;
+    width: 100vw;
     height: 100vh;
     overflow-x: hidden;
 }
@@ -40,9 +40,9 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95vw;
+    width: 100vw;
     height: 7vh;
-    background: #373737;
+    background: #111111;
     color: white;
 }
 
@@ -86,9 +86,10 @@ nav li {
     margin-top: 1%;
     margin-bottom: 1%;
     width: 100%;
-    background: #8e8e8e;
+    background: #616161;
     align-items: center;
     color: black;
+    border-radius: 20px;
 }
 
 .projects h1{
@@ -124,12 +125,16 @@ nav li {
     display: flex;
     width: 100%;
     justify-content: center;
+    border-radius: 40px;
 }
 
 .projects button {
-    color: black;
+    color: white;
+    width: 100px;
     background-color: #616161;
+    border-radius: 40px;
     padding: 1%;
+    border: 1px solid fuchsia;
 }
 
 .projects button:hover {
@@ -160,8 +165,9 @@ nav li {
     display: flex;
     flex-direction: column;
     margin-top: 1%;
-    background: #8e8e8e;
+    background: #616161;
     color: black;
+    border-radius: 20px;
 }
 
 .resume-section-header {
@@ -204,9 +210,12 @@ nav li {
 }
 
 .project button {
-    color: black;
+    color: white;
     background-color: #616161;
     padding: 1%;
+    width: 100px;
+    border-radius: 40px;
+    border: 1px solid fuchsia;
 }
 
 .project button:hover {
