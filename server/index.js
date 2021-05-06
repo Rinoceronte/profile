@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 app.use(express.static(__dirname + '/../build'));
 
+<<<<<<< HEAD
 const projects = [
     {name: 'nutritioncalculator', pictures: [{src: 'https://i.ibb.co/VB1Cc8g/5days.png', alt: '5 day meal plan'}, {src: 'https://i.ibb.co/Smm3rxS/editfood.png', alt: 'Edit foods'}], desc: 'It becomes difficult to decide what you want to eat that\'s also healthy and within your diet. This nutrition calculator reverses the roles normally assigned by such apps like myFitnessPal. Simple decide which foods you prefer and for what meals you like them and it will determine based off of your calorie and macro nutrient goals meals so you can have variety in your diet while still being healthy.', tech: 'React, HTML5, CSS3, Redux, Material-UI, Axios, C#, Postgresql', link: ''},
     {name: 'capoeiramastery', pictures: [{src: 'https://i.ibb.co/Qk27Bgs/form-validation.png', alt: 'form validation'}, {src: 'https://i.ibb.co/znmtVKp/home.png', alt: 'home page'}], desc: 'One of the best martial arts out there. Maybe not in terms of deadliness, but in enjoyment, unique movements, and community. Learn different moves to improve your game. Take your own personal notes to help as you\'re learning the moves.', tech: 'React, HTML5, CSS3, S3 Bucket, Axios, NodeJS, Express, Massive, Postgresql, Git', link: 'https://capoeiramastery.com/'},
@@ -38,3 +39,11 @@ app.get('*', function (req, res) {
 });
 
 app.listen(3005, () => console.log('running on 3005'));
+=======
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, "../build/index.html"));
+  });
+
+app.listen(3005, () => console.log('running on 3005', path.join(__dirname, "../build/index.html")));
+>>>>>>> 42ef3bee96893fc1208b1a76ffb84c883f632098
