@@ -1,11 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    color: white;
+    color: #CCC;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body {
     
-    background: #373737;
+    background: #191a1d;
     display: flex;
     justify-content: center;
     overflow-x: hidden;
@@ -13,6 +14,11 @@ body {
 
 a {
     text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
 }
 
 .App {
@@ -24,117 +30,138 @@ a {
     overflow-x: hidden;
 }
 
+.me {
+    width:100vw;
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.name {
+    margin-top: 1vh;
+    margin-left: 2vw;
+}
+
+.underline{
+    width: 7vw;
+    height: 1vh;
+    background: fuchsia;
+    opacity: 88%;
+}
+
+.name h2 {
+    font-weight: normal;
+}
+
+.me nav {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
 .about {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    /* background-image: url(https://preview.pixlr.com/images/800wm/1190/2/1190210521.jpg); */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-.me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 90vh;
     width: 100vw;
-    height: 7vh;
-    background: #111111;
-    color: white;
+    justify-content: flex-start;
 }
 
-.me section {
-    display: flex;
-    width: 20%;
-    justify-content: space-around;
-}
-
-nav {
-    position: absolute;
-    top: 2%;
-    right: 1%;
-}
-
-nav li {
-    list-style: none;
-}
-
-.menu {
-    position: absolute;
-    top: 0;
-    right: 2.6%;
-}
-
-.projectsList{
-    width: 40vw;
+.about section {
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
+    width: 45vw;
+    justify-content: center;
     align-items: flex-start;
-    justify-content: space-around;
+    font-size: 3.5rem;
 }
 
-.projectsList > h1{
-    align-self: center;
+.about section h1 {
+    width: 100%;
+    color: #CCC;
+    text-align: left;
+}
+
+.about section h1 span {
+    color: fuchsia;
+}
+
+.about section p {
+    text-align: left;
+    font-size: 2.8rem;
+    color: #B2A9A9;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-right: 50vw solid fuchsia;
+    border-left: 50vw solid transparent;
+    border-top: 40vw solid transparent;
+    opacity: 88%;
+}
+
+.projectsList {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
 }
 
 .projects {
+    display: grid;
+    width: 100vw;
+    margin: 2vh 0;
+    grid-template-columns: 10% 30% 50% 10%;
+}
+
+.project-triangle {
+    width: 0;
+    height: 0;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid transparent;
+    border-left: 120px solid fuchsia;
+    text-align: left;
+}
+
+.number {
+    transform: translate(-3vw, -2vh);
+}
+
+.img {
+    width: 320px;
+    height: 180px;
+    margin-top: 4vh;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+.about-project{
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    width: 100%;
-    background: #616161;
-    align-items: center;
-    color: black;
-    border-radius: 20px;
-}
-
-.projects h1{
-    font-size: 2rem;
-    color: black;
-}
-
-.projects h1:hover {
-    cursor: pointer;
-}
-
-.projects figure{
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.projects figure:hover {
-    cursor: pointer;
-}
-
-.projects figure figcaption{
-    color: black;
-}
-
-.projects figure img{
-    max-width: 300px;
-    max-height: 300px;
-}
-
-.project-buttons {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    border-radius: 40px;
+    justify-content: space-around;
 }
 
 .projects button {
-    color: white;
     width: 100px;
-    background-color: #616161;
     border-radius: 40px;
-    padding: 1%;
-    border: 1px solid fuchsia;
+    height: 20%;
+    align-self: center;
+    border: 2px solid fuchsia;
+    color: #B2A9A9;
+    background-color: transparent;
 }
 
 .projects button:hover {
@@ -144,86 +171,125 @@ nav li {
 .resume {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+}
+
+.resume h1 {
+    margin-left: 3vw;
+    font-size: 4rem;
+    font-weight: lighter;
 }
 
 .skills {
-    width: 95vw;
     display: grid;
-    grid-template-columns: repeat(18, 5.5%);
+    width: 100vw;
+    grid-template-columns: repeat(9, 10%);
     align-items: center;
-    height: 1vh;
     margin: 1%;
 }
 
 .skill {
     display: flex;
     justify-content: space-around;
+    font-size: 2rem;
+    margin: 2vh 0;
+    font-weight: normal;
+}
+
+.skill h4 {
+    font-weight: normal;
+}
+
+.skill span {
+    color: fuchsia;
+}
+
+.resume-sections {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    margin: 2vh 0;
 }
 
 .resume-section {
-    width: 95vw;
     display: flex;
     flex-direction: column;
-    margin-top: 1%;
-    background: #616161;
-    color: black;
-    border-radius: 20px;
+    width: 70vw;
+    justify-content: space-around;
+    
 }
 
 .resume-section-header {
-    width: 95vw;
-    color: black;
     display: flex;
+    width: 70vw;
     justify-content: space-between;
-    margin-bottom: .5%;
 }
 
-.work-loc {
+.resume-section-description {
     display: flex;
-    width: 60%;
-}
-
-.resume-section-header h2{
-    margin-left: .5%;
-    margin-right: 1.5%;
-    color: black;
-}
-
-.resume-section-description{
-    margin-left: .5%;
-    margin-right: 1%;
-    color: black;
+    flex-direction: column;
 }
 
 .bullet {
-    color: black;
-    margin-left: 1.5%;
+    display: flex;
+    align-items: center;
 }
 
-.project {
+.bullet::before {
+    content: "\2022";
+    color: fuchsia !important;
+    font-size: 3rem;
+    margin-top: -1vh;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.contact {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    font-size: 2rem;
+}
+
+.contact-me {
     display: flex;
     flex-direction: column;
+    width: 40vw;
     align-items: center;
-    width: 50vw;
-    justify-content: space-around;
-    margin: 1%;
+    justify-content: center;
 }
 
-.project button {
-    color: white;
-    background-color: #616161;
-    padding: 1%;
-    width: 100px;
+.contact-me form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+form input {
+    border-radius: 20px;
+    height: 3vh;
+    background: #2A2B30;
+    outline: none;
+}
+
+.message {
+    height: 30vh;
+    text-align: start;
+    background: #2A2B30;
+}
+
+button {
+    background: transparent;
+    color: #B2A9A9;
     border-radius: 40px;
-    border: 1px solid fuchsia;
+    padding: 1vh;
+    border: 2px solid fuchsia;
 }
 
-.project button:hover {
-    cursor: pointer;
-}
-
-.project img {
-    max-width: 500px;
-    max-height: 500px;
-    margin: 1%;
+form button {
+    margin-top: 2vh;
+    width: 50%;
+    align-self: center;
 }
