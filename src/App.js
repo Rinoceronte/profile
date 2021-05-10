@@ -27,10 +27,10 @@ const App = () => {
           <div className='underline' />
         </section>
         <nav>
-          <Link to='/'>HOME</Link>
-          <Link to='/projects'>PROJECTS</Link>
-          <Link to='/resume'>RESUME</Link>
-          <Link to='/contact'>CONTACT ME</Link>
+          <Link to='/' className={`${window.location.pathname === '/' ? 'current-location' : ''}`}>HOME</Link>
+          <Link to='/projects' className={`${(window.location.pathname === '/projects' || window.location.pathname ==='/project/*') ? 'current-location' : ''}`}>PROJECTS</Link>
+          <Link to='/resume' className={`${window.location.pathname === '/resume' ? 'current-location' : ''}`}>RESUME</Link>
+          <Link to='/contact' className={`${window.location.pathname === '/contact' ? 'current-location' : ''}`}>CONTACT ME</Link>
         </nav>
       </header>
       {/* <Game /> */}

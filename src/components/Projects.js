@@ -15,13 +15,14 @@ const Projects = () => {
     return <div className='projectsList'>
         {projects?.map((p, i) => {
             return <section key={i} className='projects'>
-                <div className='project-triangle' onClick={_ => history.push(`/project/${p.name.toLowerCase().replace(/\s/g, '')}`)}>
+                {/* onClick={_ => history.push(`/project/${p.name.toLowerCase().replace(/\s/g, '')}`)} */}
+                <div className='project-triangle' >
                     {/* {i + 1} */}
                 </div>
-                <div className='img' onClick={_ => history.push(`/project/${p.name.toLowerCase().replace(/\s/g, '')}`)}>
+                <div className='img'>
                     <img src={p.pic} alt={p.name} />
                 </div>
-                <section className='about-project' onClick={_ => history.push(`/project/${p.name.toLowerCase().replace(/\s/g, '')}`)}>
+                <section className='about-project'>
                     <h2>{p.name}</h2>
                     <p>{p.desc}</p>
                 </section>

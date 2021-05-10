@@ -214,14 +214,14 @@ li {
 .resume-section {
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    width: 80vw;
     justify-content: space-around;
     
 }
 
 .resume-section-header {
     display: flex;
-    width: 70vw;
+    width: 80vw;
     justify-content: space-between;
 }
 
@@ -233,6 +233,7 @@ li {
 .bullet {
     display: flex;
     align-items: center;
+    margin-left: 1vw;
 }
 
 .bullet::before {
