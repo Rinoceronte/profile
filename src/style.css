@@ -51,6 +51,24 @@ li {
     opacity: 88%;
 }
 
+.current-location {
+    border-bottom: 2px solid fuchsia;
+}
+
+.resume-header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download {
+    /* width: 100px; */
+    margin-right: 1.5vw;
+    align-self: flex-start;
+    /* margin-top: -1vh; */
+}
+
 .name h2 {
     font-weight: normal;
 }
@@ -59,6 +77,7 @@ li {
     display: flex;
     width: 40%;
     justify-content: space-around;
+    margin-right: 1vw;
 }
 
 .about {
@@ -209,6 +228,48 @@ li {
     width: 100vw;
     justify-content: space-between;
     margin: 2vh 0;
+    align-items: center;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+.education > h1 {
+    align-self: flex-start;
+}
+
+.school {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100vw;
+    justify-content: space-between;
+    margin: 2vh 0;
+}
+
+.school h1 {
+    font-size: 3rem;
+}
+
+.education-header {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.school-about .bullet {
+    font-size: 1rem;
+    margin-left: 5vw;
+}
+
+.divider {
+    width: 100vw;
+    height: 0.5vh;
+    background-color: fuchsia;
+    margin: 2vh 0;
 }
 
 .resume-section {
@@ -221,14 +282,39 @@ li {
 
 .resume-section-header {
     display: flex;
+    flex-direction: column;
     width: 80vw;
+    /* justify-content: space-between; */
+}
+
+.work-loc {
+    display: flex;
     justify-content: space-between;
+    width: 80vw;
+}
+
+.work-loc h2:nth-of-type(2) {
+    /* align-self: flex-end; */
+    justify-self: flex-end;
 }
 
 .resume-section-description {
     display: flex;
     flex-direction: column;
 }
+
+.resume-project-header {
+    display: flex;
+}
+
+.resume-project-tech {
+    display: flex;
+}
+
+.resume-project-tech span {
+    color: fuchsia;
+}
+
 
 .bullet {
     display: flex;

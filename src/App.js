@@ -8,15 +8,17 @@ import Resume from './components/Resume';
 import {Slide} from '@material-ui/core';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Avatar from '@material-ui/core/Avatar';
 import TreeItem from '@material-ui/lab/TreeItem';
 import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
-const App = () => {
+const App = (props) => {
   const [menu, setMenu] = useState(false);
   const history = useHistory();
+  const [location, setLocation] = useState('home');
   
 
   return (
@@ -27,10 +29,11 @@ const App = () => {
           <div className='underline' />
         </section>
         <nav>
-          <Link to='/' className={`${window.location.pathname === '/' ? 'current-location' : ''}`}>HOME</Link>
-          <Link to='/projects' className={`${(window.location.pathname === '/projects' || window.location.pathname ==='/project/*') ? 'current-location' : ''}`}>PROJECTS</Link>
-          <Link to='/resume' className={`${window.location.pathname === '/resume' ? 'current-location' : ''}`}>RESUME</Link>
-          <Link to='/contact' className={`${window.location.pathname === '/contact' ? 'current-location' : ''}`}>CONTACT ME</Link>
+          <Avatar alt="Personal Picture" src="https://i.ibb.co/KWFbnd3/self2.jpg" />
+          <Link to='/' className={`${location === 'home' ? 'current-location' : ''}`} onClick={_ => setLocation('home')}>HOME</Link>
+          <Link to='/projects' className={`${location === 'projects' ? 'current-location' : ''}`} onClick={_ => setLocation('projects')}>PROJECTS</Link>
+          <Link to='/resume' className={`${location === 'resume' ? 'current-location' : ''}`} onClick={_ => setLocation('resume')}>RESUME</Link>
+          <Link to='/contact' className={`${location === 'contact' ? 'current-location' : ''}`} onClick={_ => setLocation('contact')}>CONTACT ME</Link>
         </nav>
       </header>
       {/* <Game /> */}

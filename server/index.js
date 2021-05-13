@@ -2,13 +2,18 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const sgMail = require('@sendgrid/mail');
+const fs = require('fs');
+const cors = require("cors");
+
+// const resume = require('./ThomasCrockettResume.pdf');
 
 const app = express();
 app.use(express.json());
 // app.use(express.urlencoded());
 app.use(express.static(__dirname + '/../build'));
+app.use(cors());
 
-const {API_KEY} = process.env;
+const {API_KEY} = process.env; 
 sgMail.setApiKey(API_KEY);
 
 const projects = [
@@ -21,7 +26,7 @@ const shortprojects = [
     {name: 'Nutrition Calculator', desc: 'Get meals created for you based off of foods you like for your nutrition goals', link: '', pic: 'https://i.ibb.co/VB1Cc8g/5days.png'},
     {name: 'Capoeira Mastery', desc: 'Learn new moves for one of the best martial arts there is.', link: 'https://capoeiramastery.com', pic: 'https://i.ibb.co/znmtVKp/home.png'},
     {name: 'Brainify', desc: 'Improve your brain health with short minigames.', link: 'https://brainifygames.com', pic: 'https://i.ibb.co/jv23nMV/speedmatch-played.png'}
-];
+]; 
 
 app.get('/api/project/:name', function(req, res) {
     const name = req.params.name;
@@ -52,6 +57,11 @@ app.post('/api/email', function(req, res) {
         return res.status(500).send(err) 
     });
     
+})
+
+app.get('/api/resume', function(req, res) {
+    const resume = fs.createReadStream("./public/ThomasCrockettResume.pdf");
+    resume.pipe(res);
 })
 
 app.get('*', function (req, res) {
