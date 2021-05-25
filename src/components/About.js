@@ -92,7 +92,7 @@ const About = () => {
         <section>
             <h1>Hey, I'm <span>Thomas.</span></h1>
             {/* <p id="typing">A web developer/Software Engineer from Utah. I specialize in backend programming and have a love of learning, growth, and development.</p> */}
-            <ITyped className='container typed-cursor' showCursor={false} strings={strings} typeSpeed={100} backSpeed={5} startDelay={100} backDelay={250} loop={false}/>
+            <ITyped className='container typed-cursor' showCursor={false} strings={strings} typeSpeed={50} backSpeed={5} startDelay={100} backDelay={250} loop={false}/>
         </section>
         
         <div className='triangle' />
